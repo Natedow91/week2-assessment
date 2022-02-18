@@ -10,7 +10,9 @@
 
 //////////////////PROBLEM 1////////////////////
 /*  
-    
+  Below is a cart array that has food objects inside. 
+  Write a callback below that uses the reduce array method to 
+  calculate the sum of all the food.  
 */
 
 const cart = [
@@ -30,7 +32,23 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+
+
+const sum = cart.reduce((acc = {}, item = {}) => {
+  const itemTotal = parseFloat((item.amount * item.quantity).toFixed(2));
+ 
+
+  acc.subtotal = parseFloat((acc.subtotal + itemTotal).toFixed(2));
+  
+  
+
+  return acc;
+}, {
+  subtotal: 0,
+  total: 0
+});
+
+console.log(sum);
 
 
 //////////////////PROBLEM 2////////////////////

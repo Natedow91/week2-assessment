@@ -23,9 +23,11 @@
 
 //CODE HERE
 
+const greetUser = (username) => {
+    return 'Welcome back', + username
+} 
 
-
-
+console.log()
 
 //////////////////PROBLEM 2////////////////////
 /* 

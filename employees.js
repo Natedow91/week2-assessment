@@ -20,7 +20,15 @@
 */
 
 //CODE HERE
-
+class employee {
+    constructor(name, shifts) {
+        this.name = name
+        this.shifts = shifts
+    }
+    getSchedule(){
+        console.log(this.name 'works on', this.shifts)
+    }
+}
 
 
 /*
@@ -84,6 +92,13 @@
 
 //CODE HERE
 
+class Manager extends employee {
+    constructor(name, shifts, employees){
+        super(name, shifts)
+        
+        this.employees = employees
+    }
+}
 
 
 /*
