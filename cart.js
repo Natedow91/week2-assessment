@@ -67,6 +67,11 @@ console.log(sum);
 */
 
 //CODE HERE
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    let finalPrice = cartTotal + (cartTotal * tax) - couponValue
+    return finalPrice 
+}
+console.log(calcFinalPrice(15, 3, .06))
 
 
 
@@ -92,12 +97,25 @@ console.log(sum);
 
 /*
     TEXT ANSWER HERE
+ customer {
+     name: 
+     phoneNumber: 
+     age: 
+     birthday:
 
-*/
-
+ }
+I put name so we can know who it is we are talking too, Phone number so we can reach them and text out promotions, 
+age so we can reach the right age demographic, and birthday so we can send them a birthday deal
 /*
     Now, create a customer object following your own
     guidelines.
 */
 
 //CODE HERE
+customer {
+    firstName: "Nate",
+    phoneNumber: 5555555555,
+    age: 31,
+    birthday: "February 21st",
+
+}

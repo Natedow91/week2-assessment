@@ -52,7 +52,15 @@ console.log()
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
+function canWeDeliver(zipCode) {
+    if(deliveryAreaZipCodes.includes(zipCode)) {
+        return "You're in our delivery zone!"
+    } else {
+        return "Sorry, we can't delivery to that area"
+    }
+}
 
+console.log(canWeDeliver(85204))
 
 
 /* 
@@ -73,7 +81,16 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
-
+function canWeDeliverTwo(zipCode) {
+    for(let i = 0; i < deliveryAreaZipCodes.length; i++) {
+        if(deliveryAreaZipCodes[i] === zipCode) {
+            return "You're in the delivery zone!"
+        } else {
+            return "Sorry, we can't delivery to your area"
+        }
+    }
+}
+console.log(canWeDeliverTwo(85213))
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -110,6 +127,8 @@ const deals = [
 
 //CODE HERE
 
+const updatedDeals = deals[0].title.replace(`15% Off!`, `10% Off!`);
+console.log({updatedDeals});
 
 
 /*
@@ -124,5 +143,5 @@ const deals = [
     whitespace in this string, since it seems
     to be displaying wrong on the live site.
 */
-
+const newMonth = deals[1].desc.replace('March', 'April')
 //CODE HERE
